@@ -1,3 +1,5 @@
+/* == Tags == */
+
 main {
     margin: auto;
     width: 50%;
@@ -8,11 +10,17 @@ main h1 {
     text-align: center;
 }
 
-#found-color {
+figure {
     width: 300px;
     height: 300px;
 }
 
 span {
     background-color: white;
+}
+
+/* Elements */
+
+#chosen-color, #found-color {
+    background-color: black;
 }

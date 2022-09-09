@@ -1,8 +1,11 @@
 function chooseColor() {
     let color = document.getElementById("color-input").value;
 
-    console.log(color);
-    document.getElementById("chosen-color").innerHTML=color;
+    document.getElementById("chosen-color-hex").innerHTML=color;
+    document.getElementById("chosen-color").style.backgroundColor = color;
+
+
+    findClosestColor();
   }
 
 function differenceBewteenColors(color1, color2) {
@@ -21,7 +24,6 @@ function differenceBewteenColors(color1, color2) {
     let totalDiff = rDiff + gDiff + bDiff;
 
     return totalDiff;
-
 }
 
 function findClosestColor() {
@@ -45,7 +47,3 @@ function findClosestColor() {
     document.getElementById("found-color-name").innerHTML = closestColorName;
     document.getElementById("found-color").style.backgroundColor = closestColorHex;
 }
-
-
-
-

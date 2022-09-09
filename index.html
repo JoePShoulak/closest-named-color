@@ -17,14 +17,18 @@
         <main>
             <h1>Closest Named Color Picker</h1>
             <p>This is a tool that allows you to specify a color and query for the closest named CSS color to your input.</p>
-
+            <!-- Input -->
             <span>Select a color: </span><input type="color" id="color-input" onchange="chooseColor()"/>
-            <span id="chosen-color"></span>
-            <input type="button" value="Find closest color!" onclick="findClosestColor()"/>
-            <div id="found-color">
-                <span id="found-color-hex"></span>
-                <span id="found-color-name"></span>
-            </div>
+            <section>
+                <figure id="chosen-color"">
+                    <span id="chosen-color-hex">#000000</span>
+                </figure>
+                <!-- Output --> 
+                <figure id="found-color">
+                    <span id="found-color-hex">#000000</span>
+                    <span id="found-color-name">black</span>
+                </figure>
+            </section>
         </main>
         
     </body>
