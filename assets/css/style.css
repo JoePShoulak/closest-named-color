@@ -1,9 +1,5 @@
 /* == Tags == */
 
-:root {
-    --figure-size: 300px;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -34,8 +30,8 @@ main {
 }
 
 figure {
-    width: var(--figure-size);
-    height: var(--figure-size);
+    width: 300px;
+    height: 300px;
 }
 
 span {
