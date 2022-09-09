@@ -20,17 +20,18 @@
     <body>
         <!-- Header -->
         <header>
-            <h1>Closest Named Color Picker</h1>
+            <h1>CSS Color Picker</h1>
         </header>
         
         <!-- Main -->
         <main>
+            <h2>Find the closest CSS color</h2>
             <p>
                 This is a tool that allows you to specify a color and 
                 query for the closest named CSS color to your input.
             </p>
             <!-- Input -->
-            <span>Select a color: </span><input type="color" id="color-input" onchange="chooseColor()"/>
+            <label>Select a color: </label><input type="color" id="color-input" onchange="chooseColor()"/>
             <!-- Output --> 
             <section>
                 <!-- Chosen color -->
@@ -44,6 +45,11 @@
                 </figure>
             </section>
         </main>
+
+        <!-- Footer -->
+        <footer>
+            Made by Joe Shoulak (TODO: github link)
+        </footer>
         
     </body>
 </html>
