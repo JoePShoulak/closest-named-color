@@ -6,24 +6,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Closest Named Color</title>
+
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&family=Roboto&display=swap" rel="stylesheet" />
+      
         <script src="./assets/scripts/main.js"></script>
         <script src="./assets/scripts/colorNames.js"></script>
     </head>
 
     <!-- Body -->
     <body>
+        <!-- Header -->
+        <header>
+            <h1>Closest Named Color Picker</h1>
+        </header>
+        
         <!-- Main -->
         <main>
-            <h1>Closest Named Color Picker</h1>
-            <p>This is a tool that allows you to specify a color and query for the closest named CSS color to your input.</p>
+            <p>
+                This is a tool that allows you to specify a color and 
+                query for the closest named CSS color to your input.
+            </p>
             <!-- Input -->
             <span>Select a color: </span><input type="color" id="color-input" onchange="chooseColor()"/>
+            <!-- Output --> 
             <section>
-                <figure id="chosen-color"">
+                <!-- Chosen color -->
+                <figure id="chosen-color">
                     <span id="chosen-color-hex">#000000</span>
                 </figure>
-                <!-- Output --> 
+                <!-- Found color -->
                 <figure id="found-color">
                     <span id="found-color-hex">#000000</span>
                     <span id="found-color-name">black</span>

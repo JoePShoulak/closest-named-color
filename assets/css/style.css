@@ -1,13 +1,7 @@
 /* == Tags == */
 
-main {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-}
-
-main h1 {
-    text-align: center;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 figure {
