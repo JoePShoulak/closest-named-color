@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Meta -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Closest Named Color</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <script src="./assets/scripts/main.js"></script>
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Main -->
+        <main>
+            <h1>Closest Named Color Picker</h1>
+            <p>This is a tool that allows you to specify a color and query for the closest named CSS color to your input.</p>
+
+            <span>Select a color: </span><input type="color" id="color-input" onchange="chooseColor()"/>
+            <span id="chosen-color"></span>
+            <input type="button" value="Find closest color!" onclick="findClosestColor()"/>
+            <div id="found-color">
+                <span id="found-color-hex"></span>
+                <span id="found-color-name"></span>
+            </div>
+        </main>
+        
+    </body>
+</html>
