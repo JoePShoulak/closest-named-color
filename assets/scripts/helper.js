@@ -8,7 +8,7 @@ const sumOfAbsDiffs = (arr1, arr2) =>
   arr1.reduce((acc, val, i) => acc + Math.abs(val - arr2[i]), 0);
 
 /* == COLOR FUNCTIONS == */
-// Parse a hex code ('#123456') into pairs ([12, 34, 56])
+// Parse a hex code ('#102030') into an integer array ([16, 32, 48])
 const parseHex = hex => {
   let r = parseInt(hex.slice(1, 3), 16);
   let g = parseInt(hex.slice(3, 5), 16);
@@ -23,21 +23,22 @@ const colorDiff = (color1, color2) =>
 
 // Find the closest named color
 const closestNamedColor = async color => {
-  let closestName = "";
-  let closestDiff = 1000;
+  let closest = "";
+  let minDiff = 1000;
 
   // Load in the named colors
-  const namedColors = await loadJson("./assets/data/colors.json");
+  const allColors = await loadJson("./assets/data/colors.json");
 
   // Manually reduce the list of named colors to the closest named color
-  Object.entries(namedColors).forEach(([name, hex]) => {
+  Object.entries(allColors).forEach(([name, hex]) => {
     let currDiff = colorDiff(hex, color);
 
-    if (currDiff < closestDiff) {
-      closestDiff = currDiff;
-      closestName = name;
+    if (currDiff < minDiff) {
+      minDiff = currDiff;
+      closest = name;
     }
   });
 
-  return { name: closestName, hex: namedColors[closestName] };
+  // Return an object containing the name and hex of the closest color
+  return { name: closest, hex: allColors[closest] };
 };
