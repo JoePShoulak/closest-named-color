@@ -1,3 +1,4 @@
+/* Global */
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +6,7 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* Tags */
 main {
   padding: 20px;
 }
@@ -24,10 +26,12 @@ button {
   padding-right: 5px;
 }
 
+/* Classes */
 .display {
   background-color: white;
 }
 
+/* IDs */
 #found-color-div {
   width: 75vw;
   height: 50vh;
