@@ -26,12 +26,14 @@
       </p>
 
       <!-- Input -->
-      <span>Select a color: </span>
-      <input type="color" id="color-input" onchange="chooseColor()" />
-      <span id="chosen-color"></span>
+      <div id="input-div">
+        <span>Select a color: </span>
+        <input type="color" id="color-input" onchange="chooseColor()" />
+        <span id="chosen-color"></span>
+        <button onclick="runScript()">Find Closest Color!</button>
+      </div>
 
       <!-- Output -->
-      <button onclick="runScript()">Find Closest Color!</button>
       <div id="found-color-div">
         <span id="found-color-hex" class="display">#000000: </span
         ><span id="found-color-name" class="display">black</span>

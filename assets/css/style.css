@@ -40,3 +40,9 @@ button {
   margin: auto;
   margin-top: 20px;
 }
+
+#input-div {
+  margin: auto;
+  margin-top: 20px;
+  width: 50vw;
+}
