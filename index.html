@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Closest Named Color</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/scripts/colorHelper.js"></script>
+    <script src="./assets/scripts/helper.js"></script>
   </head>
 
-  <!-- Body -->
   <body>
-    <!-- Main -->
     <main>
       <h1>Closest Named Color Picker</h1>
       <p>
@@ -20,15 +18,19 @@
         closest named CSS color to your input.
       </p>
 
+      <!-- Input -->
       <span>Select a color: </span
       ><input type="color" id="color-input" onchange="chooseColor()" />
       <span id="chosen-color"></span>
+
+      <!-- Output -->
       <button onclick="runScript()">Find Closest Color!</button>
       <div id="found-color-div">
         <span id="found-color-hex"></span>
         <span id="found-color-name"></span>
       </div>
     </main>
-    <script src="./assets/scripts/main.js"></script>
+
+    <script src="./assets/scripts/index.js"></script>
   </body>
 </html>

@@ -8,16 +8,11 @@ const parseHex = hex => {
   return [r, g, b];
 };
 
-const differenceBewteenColors = (color1, color2) => {
-  let [r1, b1, g1] = parseHex(color1);
-  let [r2, b2, g2] = parseHex(color2);
+const sumOfAbsDiffs = (arr1, arr2) =>
+  arr1.reduce((acc, val, i) => acc + Math.abs(val - arr2[i]), 0);
 
-  let dR = Math.abs(r1 - r2);
-  let dG = Math.abs(g1 - g2);
-  let dB = Math.abs(b1 - b2);
-
-  return dR + dG + dB;
-};
+const colorDiff = (color1, color2) =>
+  sumOfAbsDiffs(parseHex(color1), parseHex(color2));
 
 const findClosestColor = async color => {
   let closestName = "";
@@ -26,10 +21,10 @@ const findClosestColor = async color => {
   const namedColors = await loadJson("./assets/data/colors.json");
 
   Object.entries(namedColors).forEach(([name, hex]) => {
-    let currentDiff = differenceBewteenColors(hex, color);
+    let currDiff = colorDiff(hex, color);
 
-    if (currentDiff < closestDiff) {
-      closestDiff = currentDiff;
+    if (currDiff < closestDiff) {
+      closestDiff = currDiff;
       closestName = name;
     }
   });
