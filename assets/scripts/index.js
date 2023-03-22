@@ -12,9 +12,10 @@ const chooseColor = () => (chosenColor.innerHTML = colorPicker.value);
 
 // Display the found color
 const displayColor = color => {
-  outputHex.innerHTML = color.hex;
+  outputHex.innerHTML = `${color.hex}: `;
   outputName.innerHTML = color.name;
   outputDiv.style.backgroundColor = color.hex;
+  outputDiv.style.borderColor = color.hex;
 };
 
 // The meat and potatoes
