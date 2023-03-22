@@ -1,7 +1,7 @@
 const colorPicker = document.getElementById("color-input");
 const chosenColor = document.getElementById("chosen-color");
 
-const outputDiv = document.getElementById("found-color");
+const outputDiv = document.getElementById("found-color-div");
 const outputName = document.getElementById("found-color-name");
 const outputHex = document.getElementById("found-color-hex");
 
