@@ -18,4 +18,4 @@ const displayColor = color => {
 };
 
 // The meat and potatoes
-const runScript = () => findClosestColor(colorPicker.value).then(displayColor);
+const runScript = () => closestNamedColor(colorPicker.value).then(displayColor);
