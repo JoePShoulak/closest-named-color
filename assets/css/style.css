@@ -23,5 +23,6 @@ header {
   height: 50vh;
   border: 1px solid black;
   background-color: black;
+  margin: auto;
   margin-top: 20px;
 }
