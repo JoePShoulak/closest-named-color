@@ -23,7 +23,7 @@ const findClosestColor = async color => {
   let closestName = "";
   let closestDiff = 1000;
 
-  const namedColors = await loadJson("./assets/data/namedColors.json");
+  const namedColors = await loadJson("./assets/data/colors.json");
 
   Object.entries(namedColors).forEach(([name, hex]) => {
     let currentDiff = differenceBewteenColors(hex, color);
